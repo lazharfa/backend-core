@@ -1,0 +1,110 @@
+apps:
+  - name: bantutetangga-queue-work
+    script: artisan
+    exec_mode: fork
+    interpreter: php
+    instances: 1
+    args:
+      - queue:work
+      - --queue=bantutetangga.com
+      - --env=bantutetangga-prod
+
+  - name: insanbumimandiri-queue-work
+    script: artisan
+    exec_mode: fork
+    interpreter: php
+    instances: 1
+    args:
+      - queue:work
+      - --queue=insanbumimandiri.org
+      - --env=insanbumimandiri-prod
+
+  - name: pesantrenquran-queue-work
+    script: artisan
+    exec_mode: fork
+    interpreter: php
+    instances: 1
+    args:
+      - queue:work
+      - --queue=pesantrenquran.org
+      - --env=pesantrenquran-prod
+
+  - name: rumahasuh-queue-work
+    script: artisan
+    exec_mode: fork
+    interpreter: php
+    instances: 1
+    args:
+      - queue:work
+      - --queue=rumahasuh.org
+      - --env=rumahasuh-prod
+
+  - name: rumahpangan-queue-work
+    script: artisan
+    exec_mode: fork
+    interpreter: php
+    instances: 1
+    args:
+      - queue:work
+      - --queue=rumahpangan.org
+      - --env=rumahpangan-prod
+
+  - name: sahabatpedalaman-queue-work
+    script: artisan
+    exec_mode: fork
+    interpreter: php
+    instances: 1
+    args:
+      - queue:work
+      - --queue=sahabatpedalaman.org
+      - --env=sahabatpedalaman-prod
+
+  - name: peduliibuanak-queue-work
+    script: artisan
+    exec_mode: fork
+    interpreter: php
+    instances: 1
+    args:
+      - queue:work
+      - --queue=peduliibuanak.org
+      - --env=peduliibuanak-prod
+
+  - name: indonesiasiaga-queue-work
+    script: artisan
+    exec_mode: fork
+    interpreter: php
+    instances: 1
+    args:
+      - queue:work
+      - --queue=indonesiasiaga.org
+      - --env=indonesiasiaga-prod
+
+  - name: bersamaquran-queue-work
+    script: artisan
+    exec_mode: fork
+    interpreter: php
+    instances: 1
+    args:
+      - queue:work
+      - --queue=bersamaquran.org
+      - --env=bersamaquran-prod
+
+  - name: harapandhuafa-queue-work
+    script: artisan
+    exec_mode: fork
+    interpreter: php
+    instances: 1
+    args:
+      - queue:work
+      - --queue=harapandhuafa.org
+      - --env=harapandhuafa-prod
+
+  - name: persalinangratis-queue-work
+    script: artisan
+    exec_mode: fork
+    interpreter: php
+    instances: 1
+    args:
+      - queue:work
+      - --queue=persalinangratis.org
+      - --env=persalinangratis-prod

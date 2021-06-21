@@ -1,0 +1,12 @@
+{
+    "type": "service_account",
+    "project_id": "indonesiasiaga-13b17",
+    "private_key_id": "fcfdf6be2bd57610b390ba5aaf699160723b2f2d",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC0VjVKnUz250YU\nJ9Dsk3vVaduuKqFy3eWPpzUWqWAgPDkbH9E8vWq/YwTNh9l8VmCBs7ofv0/4cY09\nfHRVunjwj0bIzNaqFGgX6JHayylRKJ5BbSuxlVo6wyhV6DOtw4wnrlJo7dmIhfR9\n9fnOjwbvjyoO/3SeEzxx2NLWsQEMhULvEZEs8FkqhQWAj8t/8tz+6B+gd3gvLcCE\nD8VOydktNjgxJvwZnzkWFscQ8zTcBCkiWq8PJE+HaehaFvQTs2yg3gJkHKSPF9gg\njhQSUyKwow+CWhDVgW/Tu62FBURe57P112/d7MgIhNLVKblFGKPeX21DDYDHOoIb\nyVGB9CbxAgMBAAECggEAFW03xD+H3T8x56Oqcm18lWkQObOlfqMoSyb0CxcBTZsy\nMsuXPgcId6hxceUt/VS6/zYmS27c9tkxDajrnqL7CyQO5j1WVRt7GbofmFYyuMqh\ncQciXaVv9NLqyDhAaak2DiHrdz2pbsvxtoSjE3yRd6W0Otd12PFSqXk4Zdtek0jQ\nDUU7XT/QmVdI3mhuee+gsL+SUBHRUAuoEBEm+aXXTbAzKP7EaXFQzrJXx3abuAB4\nFdNHbgLRJNs/YVlld73c9WRo9PaJXEsnmco1VU3N9P6sG/GBnabPLkGP9BkxoXPV\nxR7xklr+JmkIDSmJ+mfV8B/SJ1Scqda12K5KSyhy9QKBgQDcpO3Hlv1n91ztEsse\nls3sRElAZBu9NWNB8e1Aar7wEZy7oZUatoOerDjSfjjxFsuPT1BksnruFUFtfmZt\nLGrNP2nGn4Amhyh2MVvQ+5+t+Lui+K3R07C784KOY4N1UvyVO5cJb8VOwsaM0vIO\nebxxhHYUxyQtuT/0ygVY6ryjNQKBgQDRO9IvE1/oW/OosTAT/Z1Yikiio9cxdVuZ\nUQ6m9Q/q6CXfpM1ZPT5DWStKIc0OSP/zuSvERCTqrKP44NeQwOwq7JluCCwkpVBQ\nUpqyr+RgJxAc/3LXkIzorFP5hfS4dsJvumaUZeZtezG6cTBKPx2fJgx7OJztncBO\nM0r4b6zQTQKBgQCp0SZQ3xzZz8BtlnFOcbK7jTLzpBjVXymtr41ybrXV/zgqEQq5\nLI/Qp6x0FUGuDGVPPzQYzGVgqGta4lXi4LSyk4PNoyT2gj/Z99M63O7g7vc7Tzo4\nrDzx61EoVd7vhZdxJBPy51tsaux1pkU2butiUxiulTZ7GoDm3jWPYdsdoQKBgQDB\n0DrzFmxZzYtX8MHLUrsEwBtmZIQ6sS4nR9lduFWFUIN8tajuB/f75MZfxg2vNNm6\nxwUOqdzUcRT2vjeQQ9TAMigxr2pMi8Folgvsh1fx5V1crxePLLwJ709eLMKyeHfF\njRHmVrnrIhm/TYfgzrQ+rr0TCy76QI1ZItRIaxHWZQKBgQCjPpcxdQplyCY3RrCr\ndVlkftUIbObQGYEcEsXW1XYGNCAV0qOwVu5Ayd6Fhycfx4vCCosr7LY5J5MANmIK\nLt1dqpdP3bYOl7lVBbHkEbfvICVbS9q9+Nm9FRffYX9NnIqz7ySftJAWGKcBUcq9\nXn1aVRTDJ0Bo4lJ1tYnrwLM5RQ==\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-7h1er@indonesiasiaga-13b17.iam.gserviceaccount.com",
+    "client_id": "117275401464509479787",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-7h1er%40indonesiasiaga-13b17.iam.gserviceaccount.com"
+}

@@ -1,0 +1,12 @@
+{
+    "type": "service_account",
+    "project_id": "dwl-ibm-maret-2021",
+    "private_key_id": "cf4d4cfd68b780372e4a77077b82dec92ee01f3a",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCz4ZUvTV0EKLVD\nLEyGMg5ZnX8+q0XV1CJ5QRqbufMDfXN8QQDCfy7oB1nwNMcywmtY4VTqd1Ge+FHD\nmoAcJXhmafyAUliiahLz+dy2RELC4y+Bc2CUSisiOoq9wF8ojRfwp9g02GUe5v0A\n5WLMx1QecpfiC+d2YoqHzlhFrKxnKa97ghCTnHjsPxn4Z0bkfkjvyugWXDr3tajH\nAhOpRF51aQhySameMuwA+1Od2gBxMT3viwqwAP1EnIr2MGsp9xKrVrg0A5jH6pgR\nNFEXdENGWNjRyWN9CZpc8n46r4H09XRNl8eYhF6+SYytgbQ5gg7tapwK5z39OzrV\n/bbtcW+DAgMBAAECggEABIykgsVAoH3NE81XhB9Y+JBAqxuW0REj7BAm9aBO0pxG\nIvLb649e5tRkxGv5S8HaCC3uwV1SLaSXIMzUB6I0+NYeYjpy7myjXRNJLzzruVUY\nmvwJicaUb7GuV505auOiot4D3FZKvGzYIkEq7gXujTSVvcxSRs64NTYVSnHTDGrZ\nDntEBF6JBApWrCemyzqGkJrWIlECK2CYPHkeR5E+9dY2p1N1RxFkIMnk6tB2eXu1\n1Q1svlRVDLzcsPGd826NQ1ffgp1JtwNaQKnr5lIn2mWZTx8bPIFhq3hfYRiau1jq\ni/+k4mNR3aU7Y0Z2EpIIZpo5RCtc8mZGfL6u5ZchvQKBgQDwG5yKk2BUup2EH8Or\nLXvehzaQRKWwi3cCsM27DU7sUd3W6FpqtAoEeiyretME3DoG887TDQ5mNVdhsjB1\nIpTtMzYhYnZeqgT00cGp9IQKWV2GP3qVLoXUHYUVwL4Avur7uJLJzo26fDYqF7rQ\nAOEbJ5CL9bq2YUULG2v8Ut8VjQKBgQC/yX2Af0L0dRIlaHVvj5NSN46XbcMhajIy\ns9e28vyzYYdBrDSAFp17xTOOxmBJgo7CGgt7PwHSb0YtFGG+a2OVYlQyqPZu+B+r\nbl+lUqearyHTbPGx3ugjtmyU9m6iqCf8ug7RJegVjVrQFrA1/0/LIbriYdaPhddQ\nZEhrtxAtTwKBgHsk7ih0ZZePDnJRCD2m2jzLBEUBsCjXnnYWz6z7qlqxsiEikhzf\nsbOSJY7dM5TujiQ6rvy3WYc6HFLS3N92mQL+nOiKY0Mx19DoM3dDHOVh6AGOVQRm\nE+UyLqt1av1e7Y2koEQ4V6ApTG5SNVGw4cLXi978bIJVaN/FdKC4sAmRAoGAAkSY\ntldK7GciAs08bkhNXrCHgCTtJM0DsPPNfj1bXaeumMk3ibg6vobzeCHCa7wegg8a\nyadSFzH3q3rNORo+ADs8cajr2R4YCcfxW5whnUOq67wjE45mQl3a5NwRLN0+M8/j\ncve2yeJ1C3bpOIo/YFCSzDCKAAJ+LFYzQQrWJyMCgYEA3s3lyDseWNxm0hpgchEk\nMuPcKB0VurjvqxpADkAF6UuH3DS264Yz8P1rMLNjMd4wo/oKVxW7EYYu4ZnoFJA2\nDMUjRof+tOyfhjSD4Rv7g6AqfWI3aJvGAXP17CB9B08iv5Ar/8B0Dua55Ul8h9Me\naWblfOAWLDoDZ9W2VXmHSMg=\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-vpyyv@dwl-ibm-maret-2021.iam.gserviceaccount.com",
+    "client_id": "106231629692576547803",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-vpyyv%40dwl-ibm-maret-2021.iam.gserviceaccount.com"
+}

@@ -1,0 +1,110 @@
+apps:
+  - name: bantutetangga-core-prod
+    script: artisan
+    exec_mode: fork
+    interpreter: php
+    instances: 1
+    args:
+      - serve
+      - --port=8001
+      - --env=bantutetangga-prod
+
+  - name: insanbumimandiri-serve-prod
+    script: artisan
+    exec_mode: fork
+    interpreter: php
+    instances: 1
+    args:
+      - serve
+      - --port=8002
+      - --env=insanbumimandiri-prod
+
+  - name: pesantrenquran-serve-prod
+    script: artisan
+    exec_mode: fork
+    interpreter: php
+    instances: 1
+    args:
+      - serve
+      - --port=8003
+      - --env=pesantrenquran-prod
+
+  - name: rumahasuh-serve-prod
+    script: artisan
+    exec_mode: fork
+    interpreter: php
+    instances: 1
+    args:
+      - serve
+      - --port=8004
+      - --env=rumahasuh-prod
+
+  - name: rumahpangan-serve-prod
+    script: artisan
+    exec_mode: fork
+    interpreter: php
+    instances: 1
+    args:
+      - serve
+      - --port=8005
+      - --env=rumahpangan-prod
+
+  - name: sahabatpedalaman-serve-prod
+    script: artisan
+    exec_mode: fork
+    interpreter: php
+    instances: 1
+    args:
+      - serve
+      - --port=8006
+      - --env=sahabatpedalaman-prod
+
+  - name: peduliibuanak-serve-prod
+    script: artisan
+    exec_mode: fork
+    interpreter: php
+    instances: 1
+    args:
+      - serve
+      - --port=8007
+      - --env=peduliibuanak-prod
+
+  - name: indonesiasiaga-serve-prod
+    script: artisan
+    exec_mode: fork
+    interpreter: php
+    instances: 1
+    args:
+      - serve
+      - --port=8008
+      - --env=indonesiasiaga-prod
+
+  - name: bersamaquran-serve-prod
+    script: artisan
+    exec_mode: fork
+    interpreter: php
+    instances: 1
+    args:
+      - serve
+      - --port=8009
+      - --env=bersamaquran-prod
+
+  - name: harapandhuafa-serve-prod
+    script: artisan
+    exec_mode: fork
+    interpreter: php
+    instances: 1
+    args:
+      - serve
+      - --port=8010
+      - --env=harapandhuafa-prod
+
+  - name: persalinangratis-serve-prod
+    script: artisan
+    exec_mode: fork
+    interpreter: php
+    instances: 1
+    args:
+      - serve
+      - --port=8011
+      - --env=persalinangratis-prod

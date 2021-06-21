@@ -1,0 +1,12 @@
+{
+    "type": "service_account",
+    "project_id": "besamaquran",
+    "private_key_id": "1ea43ba91d44a7f2bcc8b588d7371a275cb308f4",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDPGmLKm3h+c9Be\nDUxgGQT+/zRtZMjMZFAdR0HUj5aqNN4vxDHK6XO59HLenKXEw5CF+rmwDEO60+tx\nr0JQ+fDt9Gsbw0+lVOVnmz9gslPsEszkjwTMwnRWBX5Z5ZkNx6MyX+V7vq7dOtrH\nSqJfJ36fEQlB9up35p/Sj4BIVN5X+pzhlBwWCWuzbtZUyssy2e5enQQKiGwYT8Sl\nnyGRMynhOASPnw9I7WUBgEl9wkDAvy+gLV2Jcv9l8QkK75zM9Ho/d9o1Lto7+lL/\nsAgpRlr6LYgKkk6Ysza+Bwxeil/o0uaR071pV6wtXodbfF9+f4dsfz/VGcLFTxJD\n6wiCYRJZAgMBAAECggEABNbBvKilx9SWZ4ApiuxCut+FHtI2Q9pLKef2kIwbUdZC\n47xSioJqXwuoXG2uDNsh5xN837FlqrmVXHZjFwfD+pdVolQtqfgCFSniMPTxs4gb\n6/Iwg0U+2RyvP1P3P8Rsmnp1nu7NYKNlpbbndNA0K+zGudkWUN9dWBrcvTPobwdD\n/OtF9bWpLgvdn4oPoAeojP15hJUZKG2hVO36vnTRrmNzFciKfxbeelu6dt2uKFjS\nxEGM+WLZ4/vAIQRbNJ7/r2ML4HYE9QC7z+eQiBwvYsSMv1szVWrpT+9FO8961BE3\nV+l3ruJORCS7coT3ekNEJR57ENfDeKBvOEjCkhuz9QKBgQDoq2asJIBc0RqsH13U\nAd21QVnJnAhGEsGfw6So96LZE2fUxEz1nTfpLzRgGGqYY5RaWtJMDUs9ef6j8nuj\nXcNBd71jaEksC04V2N2yC9CdsDB/dmz24KnyfvEpvVFgEt2GEuCaJyFT14Gx4W72\nYCC7PkcRX5m+6P/jPCiBq/mdRQKBgQDj3rJeWauvAuwF3LQzPKQFLc8+RG85CM8X\n38t2pWxZIOG0H3oCqUP0aA8AvngLqp5L1SoLhMtiUf0o0qgDzbNStnhBzUpsG2ia\nKo/kO9niE8o1BgGzZj4O5haRUrxsn2hJ8kvaxH31SZ3fwh93iqohFlU9k6nXk0QM\nw00wIg0ABQKBgQCTvPJO8EaJqUU0ch5UFnM/OqXWvLsMM7C6z7HokIXZLNdLZPIx\nK4lrCcxKEHbvGJwE25KZM//Io4QrejdDvq/TDEM3sep0iyEkAjaTbakj19KTvRDn\nmjSPhEeB53KafKApGCeB+sLQyBDUcH7S9qsR+jOKNpgbfzusgHCAFkFDuQKBgQDe\niw7+kGrY2Gyz6PFgnNe/axbcxC8vr4e51Eo8jKB9h1yG8rrRQIhqePo2Cs7o7e/9\nNakDaOTNGC+7n8iRNmLs4+Icuab2X+pPrkOrbjyDzDoOgNhGYhM3r8TYlsoI98H9\nfhJRDNfLJ+N0tXzP3e/7snj7U2xraprqMA8BdC/oFQKBgQC1opaqYTKjlY27qpfd\nflYdTsORp/VIFCLqU4eIkrlqtkqdt9CHmaAT3dHZG1mD1T0gPbl497eIevqRuEwP\nDlAADFEuhiSkwDWkfrCyFTC7Gk1oHa3cH/3SHKZL8Kz+RSy3x+84bZBk+CxTqMLb\n6xz6VP67zHMx2niy4Kj9uBceKg==\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-pup4z@besamaquran.iam.gserviceaccount.com",
+    "client_id": "102101005286614128637",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-pup4z%40besamaquran.iam.gserviceaccount.com"
+}

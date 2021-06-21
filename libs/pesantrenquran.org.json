@@ -1,0 +1,12 @@
+{
+    "type": "service_account",
+    "project_id": "pesantren-quran",
+    "private_key_id": "e1cf7d8d0ec7bf000b135653f0b9017ac0134674",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDhVPcmmyGuy0eN\nBO9Z34OqXx3FIT6q9DUZJJqDHBmxfywApuAwuHDZw5iLhBqBhGpiitoglkjs8QwS\n18QuMSE69VmJ/sgQsZ1tFv1GGPwqKXHIjhJvD0zy3Kd4SURgjyx4PZl5O1NJUgQ/\nEIVHaukIrlGW5DfTM5JVrgms5gu+5T3pohqU/KUNBSbzSw17Hn8P6yo2kGOPo4//\ndQOlhTJOy7UmY2qOt33+tLmWODZ5X/VKa95JmjG1/hLGxXY2dR6fOOItofRoSU5N\nc0hf9+AoAGdPCBm9YR48vJIlfijRdXqGaTZjSJWONEeFa8UmhPn2eqQKnRk6LXLH\nfrRX1TZbAgMBAAECggEAakDuAFLjqbBqj3lVwlvvEs4iVBwOmH9qcG49u/hqtzOg\nFLib++1lLZKZoqRK+Wru3YPbQsWLIsuxpUsAU8XQBSS/sZ4mShTvBotyJ/VNJzZ+\n1JMF5z/gSZ86CzMFXsD0t8hYT/3lEqxtmy1Xo6sqsvC8QXphRqLJbMSSBGk//aXp\n6Q9J4RQzXUekuTOykoZDyXxc3H4wp6Sn2yBvNrwwgthgOSPsfJfJQlg/48Fx5hb9\nZHejZDXqUdcwQNk6Dx/Py3fW/lSfgm5/Dv59sLG9iLGm6LYVXf4PqmljQDYht2KS\nzGpB7Nx6+SqagWY4coDS8JW8HYlV81uNuKHICANzEQKBgQD8PVpPhbp2c/DcMvze\ncJiAzVnv9dBwquCCzib19oj4A49DI13iv9Cet37JKDA8e6tMO688IFC9h45z4QL5\nJDOo4+nrmC0quuw5NpRed7TSNQts8gXc1OtZBNgkMOY1sAQwuvccl5eDrnOH4Z/e\nU2SA5qKtnXK64UhamXJYRwivSwKBgQDksOwBJm2D6/rW/4H43OW15PVifSFfu3ws\nxs4n//s+eQnY1tBI9V+5/MFgCtANDDldGnERvvpMF/2osm3TAD1JFnI+lNzpuhqn\nfWuXuc1yXt5/t8dzb5UqNP0F3jc4RHwmqKpdsoneLF2Qir6HVbxwBVR3nGAlvOoB\nkUwNhRRbMQKBgCUmFArqMxAG+04y5DMOeideFwTUOyKcx/v7yJko+fss6wiESOuA\nPIVjmPSfSptdy1iq4aAFUl7XfA9s8DcpMcKJ7oWYH+7PIMM8WpWfI65hyZD+BAcG\nBLNTl1GdMgpuJe/XWVWIrfPi2XkFrbncpkylqwfOzHrhevp85u5BZ/IJAoGAe5Ak\nVBLBRXAxXg072ozwCLGm7AoUCDeyxja8mNw0kfKwIVsfuuvpRwKMMSpmc0ZRkD6D\nLUV007x6r7WIpWMRufXI0It6OUb2s9yOT7JykQM1UOipeXOmsuFifNMuHtbSBclI\nE8wttb9e5oQwocrvP8+Bbgct4/YIscQhxYRMFWECgYEAqjYzPZJgwX4vHCjfht/Q\n7/g7N08M3z+pFREQIvKAS1W5Lq9t4Dv1Qh2AjTcuU3SQjsusyCKMPfZuACaTqcWa\nGzUxTW9XDdA8Xuss1DL3EjMBXhdY8A8FT/mwW6lRnuw4hbY5OaAEoxixOQ7kYPs4\nJ3/ruqSVLaoYKGb70A9iQbQ=\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-nv9ik@pesantren-quran.iam.gserviceaccount.com",
+    "client_id": "100874439983141593173",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-nv9ik%40pesantren-quran.iam.gserviceaccount.com"
+}

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "persalinan-gratis",
+  "private_key_id": "d82ee9bc67384a215cb3e95fbbc34264329d4359",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCft3rCo1Soi8mY\nFyC9xfT/rrzr5NQj+A7HBlFzVBCFUd6/Dz6aQ1qC5yFR4sZcHI5QCeCYiYClUyIn\nGBi4LgO289mNGK7SJjXuW8uBnhGDWftZRRpiJX/KcS9yXvG5dbc2Jd46rI7q6i/h\nMOTqmRAdrgSUpDcmMWTx7isAcejfH5J200qkMGOEmfEDw3m6REMrtvGe2PUpfDLo\nOKO6/OoMIX49dHNd8yOrdO+pglD5KTr+Ed2tNTNei+oNBcWNTe1Y3no1D/B610+W\nlXVoh7d+csae6wu8E+n0nHdNunojr4/8T2jtbdHE5jNZs7lyGopCF+ZvRY1b6rTJ\najKJjXGjAgMBAAECggEAFRslhVgZJWbHnqobwQhKXolkXNXx9Mjghwt+MvvebQfL\nJDtq/e69pMPPYudRaDW71rbfb7jn/7DzN/BWv+wQwJoL2znyTEIRaWzHAVt2nAGF\nlh/sIyEqeIGpj/cdAXGdYvHxIpbQEhoddqhD7/6HIyzuXQgwY4MugEwFcbsb13Q6\nb8bx1UmOLZZlzVZsvKA/Kvoa3Oo3d5yecNlzhWLKo/eGGkix8q4M8cT379l+It+0\ncWRdzo+OgcZDE0axAbQojWh/KCWsvIpdWERO2c1exf3PYYfHLptFYUKew3C1nyTx\nxgQIZdsv1UfOhfgko8V+mpvHJ/n9HlGg+uBwLcn5WQKBgQDe6XQCmPhFn8FDw5WI\nFFegVCNyoAcfLrAsoUP5MU7KKL1w8NgAGgjhphuwEkGAAHeTwUrD7euXgPV7K1Ki\nju7ALGlkseIaW7RJSy11TpFkwqpo99Ek/s7wVex3t7t+yTi6yCJeST3Fc1FfKXOZ\n3y4Q6+rgglOiOS/NydFErEyG+wKBgQC3bKN4z2TiufQNV3c0d0PjFUI949gisQ7q\nhZDgjD4bqxrNLPV6AjCIK7+9ZsNOnjeQLZrFLf3rdaI7V/HS8xrQA9ON46L778eO\nXihAeo5cNiCAUOLeu2xg1zhTeVbBxpsLruIUzF8OkPAhEIc5uMkUhVs3gQxuORHb\nh3hSydffeQKBgBXgk6ItoTA0HaOo7mQMmw0BNPlq+0f0LRY0PZeXX0Q3+1+6Q3i/\nFWAQDWeaYxNM+G9n6Q6Rqy2TWoRcHCAYJxZ1RWK8kpRDq84FstBwhZR+BnuG1t/q\noiS0SiD1x1EKLqcmPTlDtuxKBRJx3wabAMpoXQTrxYmGU0q/I+q5fklBAoGBAJ50\nHDgWOZnfeCQ6ZgEN8rhuOf5LIQC/IhqY7dH9dP3j71BFwX33/EL2QDp3VstIxMkp\njGVAWPWadl57l61bU9NVKuGNP9QSjLrBPlaNSQQBwkv3FDXDhVmXMtJxpO/bCT+r\ngSTkdE2aCccWhyrnJdYzadxl//4MERArVFd4hKNJAoGBAIsZZoAAkOoU2VqNqRip\nq4FRd6Ivu1zdWYVx8briqXcLW0eCUukUUDNWluEZiBX324ZKN3tUqKu3811Hkx9+\nSEyXDBS0DlNRefr85QdM41pJWIBc3/b0oOSgAOcJNCGOqG/DVzMY3dH0f91612s4\n23gqfJU211HnW+7LMOby8ZOM\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-4rkmb@persalinan-gratis.iam.gserviceaccount.com",
+  "client_id": "102876216327970434219",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-4rkmb%40persalinan-gratis.iam.gserviceaccount.com"
+}

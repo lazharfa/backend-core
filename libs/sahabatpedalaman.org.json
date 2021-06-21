@@ -1,0 +1,12 @@
+{
+    "type": "service_account",
+    "project_id": "sahabat-pedalaman-fc7a9",
+    "private_key_id": "6eff325c6827e65f4ea436f2620da11c03326a35",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCbxNcQdizRmeo4\nMhuJ25o7IM6tnJXo2xBhpLbdMvnDzjBUyEm4EdM5+xvhyElVVXE2GZ/HNNILmTim\nDB0cZFweGvm3zg4GXgkUCzpcWrJz0/CS4zvbEGPfVO/lAKAHbWsBzT63PbJHkEz9\nnQa18wT6ZUdS1MbcCb3B3T56rafOskbngL5wOSMIv5dObaQ/iJcz8eLpy4roQ+kQ\nWSrsOTajkusXkY6bEs1qNFrU/xpCeYRDX6xoOj2WrmbA/EVeTcG89clYqSTxsmap\n+ccH592vodvR6B/ieZb2GWodvxmM6NsergELRYeLrHWkyFsaDuibjpypRSPVnCNl\nVw4ZjoR3AgMBAAECggEAEVIslgSGDFKgpFoSDNzSBCQsR0rjso51fl4aBXPPKTJK\n1oqlA+ZbhhWBrrQeT3JeUeU8iqK5fpetoG01aXxRb/mQ7hroHVYkjUmIVk+xi0a0\neCjzdXMXn/Rqbp0IrnrAzOT9RdQC+Ik3vnXRErdwxMUxTqkhacNdieqnsW2Q/N9S\nqRuwgvmvMvRLeKXFJyeceZ80ePA++mUB5PMmT7kkW/0iby7p+70YxuC/+sC5CwXj\nTerbg+JVwMa8CO4cFVz08sg1gr2dqh2RY/lcKXZX0WCqttrw75TudpiUTakVBq7d\nU8aZt9Ccy+p3+NGuZ40gJl7+W4n5GzmvPqE1CtergQKBgQDPO63nRk70XqpLkG3f\nCSpj13BynzllQ7wIooj/gLMqCv4eYyYJtun9y7VAN0bO9b+NmEslRRiQhnKo/Xyd\nQgBCvFlrOMonWL8a5ie6rKTtuJ8ZbAC6aDsnCUmquqNRzBRSkPb39H6dGQRpId/P\n+iY6NgCDPqr5XhVbNIg+iBF9gQKBgQDAbM7d4pRE4N3Ukf3zX8H/HerouY1a249v\nztrAcLBt09fu5C7GnJB+Hx581e+p/3agxJzvTYCAQL8YCdszkn3beFvcd2g91vG7\nhnWjOQLIWX6VqTR1Wtfyo0Soxf/qrerSehSi0J0OXaziDFyDSGTEH7bbqLuw6jGY\nmQ3F2n7t9wKBgHVpP6c4G4WymNOFOerS25SDvG8ErVUlYkSWKf5w4ZGhdsaqsCNy\n4fHsV33Rk6mwbF4B+hlco4VG13HNZKwId/NXmWX5X/eY/XV1Du9h33PcVS/nFCaI\n5XLBfV5griWq9ZyuC28CtDW3tdsG2TKRbNUwQWwatm3gk0MAaWzcVOSBAoGBAKeb\n31D8dIPOjssC434jEbrjV2OhhFP43WbZekeXoMX5eaQXU/siEuYYuxinzJt57t24\nhK4ZBu4v94O7yhiQ6FnL69AMnlsHKAZc54jmNttGwPEhspTqLSGnPz33QaQsG1d8\niQ8MwVDrHZTEiay82TDQIxoQTnSaedrerlWBrYAfAoGAaAtesYS4qxMqj1it3X1/\na1NOYxgNlp4kH+Y+s9heuQgXBWDLEGGEdCgILPlssKXk01an6m9owTOgXJWKNOP+\nwNz/gjFQIYnLH50OebMS7MT8cLfptBx3qarwEkVgEwS45qXV3ox33nKqWBwO31YR\ndYy/gazS2TVk4TuR5h9PBrc=\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-ouplj@sahabat-pedalaman-fc7a9.iam.gserviceaccount.com",
+    "client_id": "111922414687562092607",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-ouplj%40sahabat-pedalaman-fc7a9.iam.gserviceaccount.com"
+}

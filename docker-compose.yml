@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+
+  backend_dwl:
+    container_name: backend_dwl_${MEMBERSLUG}
+    image: nginx:1.17
+    ports:
+      - ${PORT}:${PORT} 
+    volumes:
+      - ${PROJECT}/:/var/www/html
+      - ${PROJECT}/default-${MEMBERENV}.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - backend_dwl_php   
+
+  backend_dwl_php:
+    build: .
+    container_name: backend_dwl_php_${MEMBERSLUG} 
+    env_file:
+      - ${PROJECT}/members/${MEMBER}/.env
+    volumes:
+      - ${PROJECT}/.composer/docker-cache/:/root/.composer:cached
+      - ${PROJECT}/php.ini:/usr/local/etc/php/conf.d/uploads.ini 
