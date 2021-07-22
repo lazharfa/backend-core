@@ -20,7 +20,7 @@ jobs:
         key: ${{ secrets.PRIVATE_KEY }}
         port: 22
         script: |
-          cd /mnt/apps/information-system-backend-dev
+          cd /mnt/apps/backend-core-dev
           git pull origin dev
           php artisan migrate
 
