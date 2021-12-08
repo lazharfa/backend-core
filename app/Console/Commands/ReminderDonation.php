@@ -104,8 +104,12 @@ Apakah ada kesulitan dalam prosesnya? Informasi lebih lanjut melalui WA wa.me/62
 Untuk melanjutkan donasi harap transfer {$totalDonation}, ke rek {$donation->bank->bank_info} an {$donation->bank->bank_account} {$donation->bank->bank_number} untuk program {$campaignTitle} sebelum {$expiredAt}. ";
                 break;
             default:
-                $messageText = "Salam Bapak/Ibu {$donation->donor_name}. Untuk pembayaran Kurban di Pedalaman pada tanggal $dateDonation nominal $totalDonation apakah ada kesulitan dalam prosesnya ?
-informasi lebih lanjut melalui WA wa.me/628122145114";
+                $messageText = "Assalamu'alaikum Bapak/Ibu {$donation->donor_name} \n\n
+                Terima kasih sudah berkenan mengunjungi website resmi kami harapandhuafa.org
+                Kami melihat niat baik Bapak/Ibu mengunjungi website kami untuk: {$campaignTitle} pada {$dateDonation} dengan donasi sebesar {$totalDonation} \n\n
+                Untuk melanjutkan donasi harap transfer {$totalDonation}, ke rek {$donation->bank->bank_info} an {$donation->bank->bank_account} {$donation->bank->bank_number} untuk program {$campaignTitle} sebelum {$expiredAt}. \n\n
+                Jika sudah berdonasi, jangan lupa untuk konfirmasi ke nomor ini wa.me//6282114249965 \n\n
+                Terima kasih, semoga Allah melimpahkan rezeki untuk Bapak/Ibu dan keluarga.";
                 // Log::debug("Reminder donation on " . env('APP_MEMBER'));
                 break;
         }
