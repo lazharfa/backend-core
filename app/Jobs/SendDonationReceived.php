@@ -227,11 +227,19 @@ class SendDonationReceived implements ShouldQueue
                 break;
 
             case 'bantutetangga.com':
-                $messageText = "Terima kasih banyak {$to_name} atas donasi Anda, {$campaign_title} dengan nominal Rp. {$totalDonation}. Semoga selalu diberikan kesehatan, kemudahan, serta kelancaran di setiap urusan";
+                $messageText = "";
                 break;
 
             default :
-                $messageText = 'Jazaakumullah khairan katsiran ' . $to_name . ' atas titipan donasi Anda, ' . $campaign_title . ' dengan nominal Rp. ' . $totalDonation;
+                $messageText = "Assalamu'alaikum Wr.Wb\n
+                Jazaakumullah khairan katsiran Bapak/Ibu {$to_name} \n\n
+                Donasi Bapak/Ibu untuk {$campaign_title} sebesar {$totalDonation} telah kami terima. \n\n
+                Semoga Allah memberikan keberkahan dan kemudahan bagi Bapak/Ibu dan keluarga.
+                Dan semoga segala hajat dikabulkan Allah SWT.
+                Aamiin Allahumma Aamiin \n\n
+                Salam hangat,\n
+                Dian Hafitri \n
+                Cust. Relationship harapandhuafa.org";
                 break;
         }
 
