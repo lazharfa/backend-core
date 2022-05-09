@@ -4,7 +4,8 @@ return [
     'guide_email_content' => [
         'harapandhuafa.org' => [
             'background_color'  => '007DBE',
-            'logo'              => 'https://i.ibb.co/DLHn7Pv/ibm.png',
+            'logo'              => 'https://harfa.sgp1.cdn.digitaloceanspaces.com/harapandhuafa/public/harfa%20logo%20white.svg',
+            'full_color_logo'   => 'https://harfa.sgp1.cdn.digitaloceanspaces.com/harapandhuafa/public/logo%20harfa%20color.svg',
             'banner'            => null,
             'app_name'          => 'Harapan Dhuafa',
             'phone'             => '081324607225',

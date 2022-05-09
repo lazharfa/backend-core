@@ -30,6 +30,7 @@ use App\Traits\Transaction;
 use App\Console\Commands\ReminderDonation;
 use App\Traits\Helper;
 use Illuminate\Validation\Rule;
+use PDF;
 
 class DonationController extends Controller
 {
@@ -928,77 +929,19 @@ class DonationController extends Controller
     {
         try {
             $donation = Donation::whereDonationNumber($donation_number)->firstOrFail();
-            $program = $donation->campaign ? $donation->campaign->campaign_title : $donation->type_donation;
-            $payment_method = $donation->bank ? $donation->bank->bank_info : '';
+            $content = config('content.guide_email_content')[env('APP_MEMBER')];
+            $content['donation'] = $donation;
+            $content['donor_name'] = $this->maskCharacter($donation->donor_name);
+            $content['donor_phone'] = $this->maskCharacter($donation->donor_phone);
+            $content['donor_email'] = $this->maskCharacter($donation->donor_email);
 
-            $path = 'attachments/donations/receipt';
-            if (!File::isDirectory($path)) {
-                File::makeDirectory($path, 0777, true, true);
-            }
-
-            switch (env('APP_MEMBER')) {
-                case 'insanbumimandiri.org':
-                    $filename = 'ibm.png';
-                    break;
-
-                case 'rumahasuh.org':
-                    $filename = 'ra.png';
-                    break;
-
-                case 'pesantrenquran.org':
-                    $filename = 'pqt.jpg';
-                    break;
-
-                case 'bantutetangga.com':
-                    $filename = 'bantet.jpg';
-                    break;
-
-                case 'rumahpangan.org':
-                    $filename = 'rpb.png';
-                    break;
-
-                default:
-                    $filename = 'ibm.png';
-                    break;
-            }
-
-            $img = Image::make(public_path('assets/images/' . $filename));
-
-            $img->text($donation_number, 170, 1020, function($font) {
-                $font->file(public_path('assets/arial.ttf'));
-                $font->size(32);
-            });
-
-            $img->text($program, 170, 1160, function($font) {
-                $font->file(public_path('assets/arial.ttf'));
-                $font->size(32);
-            });
-
-            $img->text('Rp ' . number_format($donation->donation), 170, 1290, function($font) {
-                $font->file(public_path('assets/arial.ttf'));
-                $font->size(32);
-            });
-
-            $img->text(date('d F Y H:i:s', strtotime($donation->date_donation . ' + 7 hours')) . ' WIB', 1300, 1020, function($font) {
-                $font->file(public_path('assets/arial.ttf'));
-                $font->align('right');
-                $font->size(32);
-            });
-
-            $img->text($payment_method, 1300, 1290, function($font) {
-                $font->file(public_path('assets/arial.ttf'));
-                $font->align('right');
-                $font->size(32);
-            });
-
-            $img->save(public_path($path . '/receipt.jpg'));
-
-            return response()->download($path . '/receipt.jpg');
+            $pdf = PDF::loadView('pdf.donation_receipt', $content);
+            return $pdf->stream("Bukti Donasi {$content['app_name']} (#$donation->donation_number).pdf");
         } catch (Exception $e) {
             return response()->json([
-                'status'    => 'error',
-                'message'   => $e->getMessage(),
-                'data'      => null
+                'status' => 'error',
+                'message' => $e->getMessage(),
+                'data' => null
             ], 404);
         }
     }
