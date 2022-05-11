@@ -132,30 +132,22 @@ class SendDonationReceived implements ShouldQueue
                 'email_sent_at' => now()
             ]);
 
-            Mail::send('emails.donation_complete', $content, function ($message) use ($to_name, $to_email, $subject) {
+            $receipt = $this->createReceipt($donation);
+
+            Mail::send('emails.donation_complete', $content, function ($message) use ($to_name, $to_email, $subject, $receipt) {
                 $message->to($to_email, $to_name)
                     ->subject($subject);
                 $message->from(env('MAIL_SENDER'), env('EMAIL_NAME'));
+
+                if ($receipt != null) {
+                    $message->attach($receipt);
+                }
             });
+
+            
         }
 
-        // $data = array(
-        //         "donor_id" => $this->donation->donor_id,
-        //         "donor_name" => $this->donation->donor_name,
-        //         "date_donation" => Carbon::parse($this->donation->date_donation)->addHour(7),
-        //         "campaign_name" => $this->donation->campaign ? $this->donation->campaign->campaign_title : $this->donation->type_donation,
-        //         "total_donation" => $this->donation->total_donation,
-        //         "donation" => $this->donation
-        //     );
-
-        //     $fileName = 'donation_complete.' . env('APP_MEMBER');
-        //     $fileName = str_replace('.', '_', $fileName);
-
-        //     Mail::send('emails.' . $fileName, $data, function ($message) use ($to_name, $to_email, $subject) {
-        //         $message->to($to_email, $to_name)
-        //             ->subject($subject);
-        //         $message->from(env('MAIL_SENDER'), env('EMAIL_NAME'));
-        //     });
+        
     }
 
     public function sendWhatsapp($to_phone, $to_name, $campaign_title, $totalDonation, $donation_number, $receipt)
