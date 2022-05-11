@@ -4,7 +4,9 @@ namespace App\Jobs;
 
 use App\Models\Donation;
 use App\Models\WhatsappJob;
+use App\Traits\Helper;
 use App\Utils\Message;
+use PDF;
 use Exception;
 use GuzzleHttp\Client;
 use Illuminate\Bus\Queueable;
@@ -18,7 +20,7 @@ use Illuminate\Support\Facades\Mail;
 
 class SendDonationReceived implements ShouldQueue
 {
-    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels, Helper;
 
     protected $donation;
 
@@ -73,51 +75,16 @@ class SendDonationReceived implements ShouldQueue
                     $this->sendEmail($donation);
                 }
 
-                if ($donation->donor_phone && $donation->total_donation && env('SEND_WHATSAPP') && !$donation->whatsapp_sent_at) {
-
-                    // WhatsappJob::firstOrCreate(
-                    //     [
-                    //         'job_type' => 'Confirmation',
-                    //         'donation_id' => $donation->id,
-                    //         'whatsapp_number' => $donation->donor_phone,
-                    //         'worker' => env('WHATSAPP_WORKER', 'info-ibm')
-                    //     ],
-                    //     [
-                    //         'job_status' => 'On Queue',
-                    //         'priority' => 2,
-                    //         'whatsapp_name' => $donation->donor_name,
-                    //         'worker_mode' => 'anon',
-                    //     ]
-                    // );
-
-                    // $donation->update([
-                    //     'whatsapp_sent_at' => now()
-                    // ]);
-
-                }
-
                if ($donation->donor_phone && !$donation->whatsapp_sent_at && !$donation->message_sent_at && $donation->total_donation) {
                     $whatsapp_url = env('WHATSAPP_URL');
-                    $whatsapp_worker = env('WHATSAPP_WORKER');
+                    $whatsapp_token = env('WHATSAPP_TOKEN');
 
-                    if ($whatsapp_url && $whatsapp_worker) {
-                        try {
-                            $this->sendWhatsapp($donation->donor_phone, $donation->donor_name, $campaignTitle, number_format($donation->total_donation,0,",","."), $donation->donation_number);
-                            $donation->update([
-                                'whatsapp_sent_at'  => now()
-                            ]);
-                        } catch (Exception $e) {
-                            $this->sendMessage($donation->donor_phone, $donation->donor_name, $campaignTitle, number_format($donation->total_donation,0,",","."), $donation->donation_number);
-                            $donation->update([
-                                'message_sent_at'   => now(),
-                            ]);
-                        }
-                    }else {
-                        $this->sendMessage($donation->donor_phone, $donation->donor_name, $campaignTitle, number_format($donation->total_donation,0,",","."), $donation->donation_number);
-                        $donation->update([
-                            'message_sent_at'   => now(),
-                        ]);
+                    if ($whatsapp_url && $whatsapp_token) {
+                        $receipt = $this->createReceipt($donation);
+                        $this->sendWhatsapp($donation->donor_phone, $donation->donor_name, $campaignTitle, number_format($donation->total_donation,0,",","."), $donation->donation_number, $receipt);
                     }
+
+                    $this->sendMessage($donation->donor_phone, $donation->donor_name, $campaignTitle, number_format($donation->total_donation,0,",","."), $donation->donation_number);
                 }
 
                 if (!$donation->donor_type) {
@@ -191,7 +158,7 @@ class SendDonationReceived implements ShouldQueue
         //     });
     }
 
-    public function sendWhatsapp($to_phone, $to_name, $campaign_title, $totalDonation, $donation_number)
+    public function sendWhatsapp($to_phone, $to_name, $campaign_title, $totalDonation, $donation_number, $receipt)
     {
         $message = "Terima kasih banyak Bapak/Ibu {$to_name} atas donasi Anda untuk campaign {$campaign_title} dengan nominal Rp. {$totalDonation}. Semoga Bapak/Ibu {$to_name} selalu diberikan kesehatan, kemudahan, serta kelancaran di setiap urusan.";
 
@@ -206,9 +173,36 @@ class SendDonationReceived implements ShouldQueue
         }
 
         Message::sendWhatsappMessage($to_phone, 'success', $message, $donation_number);
+
+        try {
+            Message::sendWhatsappFile($to_phone, $receipt);
+        } catch (\Throwable $th) {
+            Log::debug("error send whatsapp file => $donation_number");
+        }
+        
         $this->donation->update([
             'whatsapp_sent_at'  => now()
         ]);
+    }
+
+    public function createReceipt($donation)
+    {
+        try {
+            $content = config('content.guide_email_content')[env('APP_MEMBER')];
+            $content['donation'] = $donation;
+            $content['donor_name'] = $this->maskCharacter($donation->donor_name);
+            $content['donor_phone'] = $this->maskCharacter($donation->donor_phone);
+            $content['donor_email'] = $this->maskCharacter($donation->donor_email);
+
+            $file_path = "Donation-Receipt-$donation->donation_number.pdf";
+
+            $pdf = PDF::loadView('pdf.donation_receipt', $content);
+            $pdf->save(public_path($file_path));
+
+            return url($file_path);
+        } catch (\Throwable $th) {
+            return null;
+        }
     }
 
     public function sendMessage($to_phone, $to_name, $campaign_title, $totalDonation, $donation_number)
