@@ -47,6 +47,8 @@ class Donation extends Model
         'push_to_balans_at'
     ];
 
+    protected $dateFormat = 'Y-m-d H:i:sP';
+
     protected $dates = [
         'date_donation',
         'expired_at'
