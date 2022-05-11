@@ -17,6 +17,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Storage;
 
 class SendDonationReceived implements ShouldQueue
 {
@@ -108,9 +109,7 @@ class SendDonationReceived implements ShouldQueue
             Log::error('Send Donation Received. ' . $exception->getMessage(), [
                 'donation_id' => $donation->id
             ]);
-
         }
-
     }
 
     public function sendEmail($donation)
@@ -144,10 +143,8 @@ class SendDonationReceived implements ShouldQueue
                 }
             });
 
-            
+            $this->deleteReceiptFile($donation->donation_number);
         }
-
-        
     }
 
     public function sendWhatsapp($to_phone, $to_name, $campaign_title, $totalDonation, $donation_number, $receipt)
@@ -168,6 +165,7 @@ class SendDonationReceived implements ShouldQueue
 
         try {
             Message::sendWhatsappFile($to_phone, $receipt);
+            $this->deleteReceiptFile($donation_number);
         } catch (\Throwable $th) {
             Log::debug("error send whatsapp file => $donation_number");
         }
@@ -194,6 +192,19 @@ class SendDonationReceived implements ShouldQueue
             return url($file_path);
         } catch (\Throwable $th) {
             return null;
+        }
+    }
+
+    public function deleteReceiptFile($donation_number)
+    {
+        try {
+            $path = "Donation-Receipt-$donation_number.pdf";
+
+            if(Storage::disk('public_path')->exists($path)) {
+                Storage::disk('public_path')->delete($path);
+            }
+        } catch (\Throwable $th) {
+            Log::debug("error delete file receipt => $donation_number");
         }
     }
 
