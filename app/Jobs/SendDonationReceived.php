@@ -143,7 +143,7 @@ class SendDonationReceived implements ShouldQueue
                 }
             });
 
-            $this->deleteReceiptFile($donation->donation_number);
+            DeleteReceiptFile::dispatch($donation->donation_number)->delay(now()->addSecond(10))->onQueue(env('APP_MEMBER'));
         }
     }
 
@@ -163,12 +163,12 @@ class SendDonationReceived implements ShouldQueue
 
         Message::sendWhatsappMessage($to_phone, 'success', $message, $donation_number);
 
-        try {
-            Message::sendWhatsappFile($to_phone, $receipt);
-            $this->deleteReceiptFile($donation_number);
-        } catch (\Throwable $th) {
-            Log::debug("error send whatsapp file => $donation_number");
-        }
+        // try {
+        //     Message::sendWhatsappFile($to_phone, $receipt);
+        //     DeleteReceiptFile::dispatch($donation_number)->delay(now()->addSecond(10))->onQueue(env('APP_MEMBER'));
+        // } catch (\Throwable $th) {
+        //     Log::debug("error send whatsapp file => $donation_number");
+        // }
         
         $this->donation->update([
             'whatsapp_sent_at'  => now()
@@ -192,19 +192,6 @@ class SendDonationReceived implements ShouldQueue
             return url($file_path);
         } catch (\Throwable $th) {
             return null;
-        }
-    }
-
-    public function deleteReceiptFile($donation_number)
-    {
-        try {
-            $path = "Donation-Receipt-$donation_number.pdf";
-
-            if(Storage::disk('public_path')->exists($path)) {
-                Storage::disk('public_path')->delete($path);
-            }
-        } catch (\Throwable $th) {
-            Log::debug("error delete file receipt => $donation_number");
         }
     }
 
