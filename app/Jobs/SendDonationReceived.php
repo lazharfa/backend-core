@@ -163,13 +163,13 @@ class SendDonationReceived implements ShouldQueue
 
         Message::sendWhatsappMessage($to_phone, 'success', $message, $donation_number);
 
-        // try {
-        //     Message::sendWhatsappFile($to_phone, $receipt);
-        //     DeleteReceiptFile::dispatch($donation_number)->delay(now()->addSecond(10))->onQueue(env('APP_MEMBER'));
-        // } catch (\Throwable $th) {
-        //     Log::debug("error send whatsapp file => $donation_number");
-        // }
-        
+         try {
+             Message::sendWhatsappFile($to_phone, $receipt);
+             DeleteReceiptFile::dispatch($donation_number)->delay(now()->addSeconds(10))->onQueue(env('APP_MEMBER'));
+         } catch (\Throwable $th) {
+             Log::debug("error send whatsapp file => $donation_number");
+         }
+
         $this->donation->update([
             'whatsapp_sent_at'  => now()
         ]);
