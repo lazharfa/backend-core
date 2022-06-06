@@ -67,29 +67,20 @@ class Message
 
     public static function sendWhatsappMessage($phone, $broadcast, $message, $donation_number=null)
     {
-
         try {
             $whatsapp_url = env('WHATSAPP_URL');
-            $whatsapp_worker = env('WHATSAPP_WORKER');
-            $member = env('APP_MEMBER');
+            $whatsapp_token = env('WHATSAPP_TOKEN');
 
-            if ($whatsapp_url && $whatsapp_worker) {
+            if ($whatsapp_url && $whatsapp_token) {
                 $client = new Client();
 
                 $body = [
-                    "priority" => 0,
-                    "worker" => $whatsapp_worker,
-                    "broadcast" => $broadcast,
+                    "token" => $whatsapp_token,
                     "message" => $message,
-                    "phone" => $phone,
-                    "callback"  => "https://core.{$member}/api/donation/notification?donation_number={$donation_number}&type={$broadcast}",
+                    "number" => $phone,
                 ];
 
-                if ($donation_number) {
-                    $body['donation_number'] = $donation_number;
-                }
-
-                $client->request('POST', "{$whatsapp_url}/api/chat/notification", [
+                $client->request('POST', "{$whatsapp_url}/api/send_message", [
                     'headers' => [
                         'Content-Type' => 'application/json',
                     ],
@@ -97,6 +88,34 @@ class Message
                 ]);
             }
 
+        } catch (Exception | GuzzleException $e) {
+            Log::error($e->getMessage());
+            throw $e;
+        }
+    }
+
+    public static function sendWhatsappFile($phone, $file)
+    {
+        try {
+            $whatsapp_url = env('WHATSAPP_URL');
+            $whatsapp_token = env('WHATSAPP_TOKEN');
+
+            if ($whatsapp_url && $whatsapp_token) {
+                $client = new Client();
+
+                $body = [
+                    "token" => $whatsapp_token,
+                    "url" => $file,
+                    "number" => $phone,
+                ];
+
+                $client->request('POST', "{$whatsapp_url}/api/send_file", [
+                    'headers' => [
+                        'Content-Type' => 'application/json',
+                    ],
+                    'json' => $body
+                ]);
+            }
         } catch (Exception | GuzzleException $e) {
             Log::error($e->getMessage());
             throw $e;

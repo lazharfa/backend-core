@@ -30,7 +30,8 @@ class CampaignNews extends Model
         'sent_at',
         'creator_id',
         'updater_id',
-        'deleted_at'
+        'deleted_at',
+        'is_pinned'
     ];
 
     protected $appends = ['category_campaign'];
